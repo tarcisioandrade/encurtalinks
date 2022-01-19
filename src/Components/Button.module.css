@@ -1,0 +1,12 @@
+.button {
+  display: inline-block;
+  padding: .5rem 1rem;
+  border-radius: 16px;
+  background-color: var(--Cyan);
+  color: white;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: hsl(180, 66%, 66%);
+}

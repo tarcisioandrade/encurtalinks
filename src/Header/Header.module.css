@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  padding-top: 1.5rem;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.img {
+  width: 100px;
+  margin-right: 2.3rem;
+}
+
+.nav ul{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav ul li a {
+  color: var(--Gray);
+  font-weight: 600;
+}
+
+.nav ul li a:hover {
+  color: var(--Dark-Violet);
+}
+
+.userBox {
+  margin-left: auto;
+}
+
+.login {
+  margin-right: 1rem;
+  color: var(--Gray);
+  font-weight: 600;
+}

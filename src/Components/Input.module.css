@@ -1,0 +1,22 @@
+.inputContainer {
+  width: 100%;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: .8rem 1rem;
+  border-radius: 8px;
+  border-color: transparent;
+}
+.error {
+  color: var(--Red);
+  font-size: .700rem;
+  font-style: italic;
+  position: absolute;
+  margin-top: .3rem;
+}
+
+.input:focus {
+  outline: none;
+}
