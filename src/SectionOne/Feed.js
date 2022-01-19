@@ -7,10 +7,11 @@ import ButtonForm from "../Components/ButtonForm";
 import useForm from "../Hooks/useForm";
 import useFetch from "../Hooks/useFetch";
 import Result from "./Result";
+import Cards from "./Cards";
 
 const Feed = () => {
   const url = useForm("url");
-  const { request, data } = useFetch();
+  const { request, data, loading } = useFetch();
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -40,7 +41,11 @@ const Feed = () => {
             placeholder="Shorten a link here..."
             {...url}
           />
-          <ButtonForm>Shorten It!</ButtonForm>
+          {loading ? (
+            <ButtonForm>Shorting...</ButtonForm>
+          ) : (
+            <ButtonForm>Shorten It!</ButtonForm>
+          )}
         </form>
       </div>
       {data && (
@@ -49,6 +54,7 @@ const Feed = () => {
           shortLink={data.result.short_link}
         />
       )}
+      <Cards />
     </section>
   );
 };

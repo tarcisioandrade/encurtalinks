@@ -29,8 +29,8 @@
 }
 
 .formUrl {
-  background: var(--Dark-Violet) url(../Assets/Imagens/bg-shorten-desktop.svg) top right;
-  max-width: 55rem;
+  background: var(--Dark-Violet) url(../Assets/Imagens/bg-shorten-desktop.svg)
+    top right;
   margin: 3rem auto 1rem auto;
   padding: 2.5rem 3rem;
   border-radius: 8px;

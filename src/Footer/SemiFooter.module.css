@@ -1,0 +1,11 @@
+.semiFooter {
+  margin-top: 4rem;
+  padding: 2.5rem 0;
+  text-align: center;
+  background: var(--Dark-Violet) url(../Assets/Imagens/bg-boost-desktop.svg) center center;
+}
+.title {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}

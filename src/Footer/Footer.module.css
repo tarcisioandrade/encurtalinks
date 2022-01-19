@@ -1,0 +1,48 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-content: center;
+  padding: 4rem 2rem 2rem 2rem;
+  background: var(--Very-Dark-Violet);
+}
+.logo {
+  text-align: center;
+}
+.logo svg > * {
+  fill: #fff;
+}
+
+.ulBox {
+  display: flex;
+  justify-content: space-around;
+}
+.ulLinks, .ulBox a {
+  font-size: .8rem;
+  color: var(--Gray);
+
+}
+.title {
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.ulBox li a {
+  line-height: 2;
+}
+.ulBox a:hover {
+  color: var(--Cyan);
+
+}
+
+.boxSociais {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.boxSociais svg {
+  cursor: pointer;
+}
+.boxSociais svg:hover > * {
+  fill: var(--Cyan);
+}

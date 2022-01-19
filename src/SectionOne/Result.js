@@ -3,12 +3,12 @@ import styles from "./Result.module.css";
 
 const Result = ({ originalLink, shortLink }) => {
   const [copy, setCopy] = React.useState("");
-  const button = React.useRef()
+  const button = React.useRef();
 
   async function copyClick() {
     setCopy(shortLink);
     await navigator.clipboard.writeText(shortLink);
-    button.current.style.backgroundColor = "hsl(257, 27%, 26%)"
+    button.current.style.backgroundColor = "hsl(257, 27%, 26%)";
   }
 
   return (
@@ -17,7 +17,11 @@ const Result = ({ originalLink, shortLink }) => {
         <p className={styles.urlUser}>{originalLink}</p>
         <p className={styles.url}>{shortLink}</p>
         {copy ? (
-          <button onClick={copyClick} ref={button} className={`${styles.button}`}>
+          <button
+            onClick={copyClick}
+            ref={button}
+            className={`${styles.button}`}
+          >
             Copied!
           </button>
         ) : (
