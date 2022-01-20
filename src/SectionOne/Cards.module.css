@@ -26,11 +26,12 @@
 }
 
 .card {
-  background: rgb(248, 246, 246);
+  background: rgb(247, 244, 244);
   padding: 0rem 1.3rem 1.3rem 1.3rem;
   position: relative;
   margin: 0 15px;
   flex: 0 0 calc(33.33% - 30px);
+  border-radius: 8px;
 }
 
 .card:nth-child(2) {
@@ -67,6 +68,9 @@
 }
 
 @media (max-width: 45rem) {
+  .container {
+    margin-top: 5rem;
+  }
   .title {
     font-size: 1.7rem;
   }
@@ -92,7 +96,7 @@
     margin-top: initial;
   }
   .imgBox {
-    right: -82.5px;
+    margin: auto;
   }
   .cardTitle {
     font-size: 1.2rem;

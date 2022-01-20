@@ -1,7 +1,7 @@
 .button {
   display: inline-block;
   padding: .5rem 1rem;
-  border-radius: 16px;
+  border-radius: 25px;
   background-color: var(--Cyan);
   color: white;
   font-weight: 600;
@@ -9,4 +9,11 @@
 
 .button:hover {
   background-color: hsl(180, 66%, 66%);
+}
+
+@media (max-width: 45rem) {
+  .button {
+    padding: .8rem 2.5rem;
+    font-size: 1.2rem;
+  }
 }

@@ -16,7 +16,8 @@
   .semiFooter {
     padding: 4rem 0;
     background: var(--Dark-Violet) url(../Assets/Imagens/bg-boost-mobile.svg)
-      center center;
+      center right;
+      background-size: cover;
   }
   .title {
     font-size: 1.8rem;

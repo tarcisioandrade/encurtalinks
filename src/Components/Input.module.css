@@ -9,6 +9,9 @@
   border-radius: 8px;
   border-color: transparent;
 }
+.input::placeholder {
+  opacity: .6;
+}
 .error {
   color: var(--Red);
   font-size: .700rem;
@@ -23,9 +26,10 @@
 
 @media (max-width: 45rem) {
   .input {
-    padding: .5rem;
+    padding: .8rem;
   }
   .error {
     position: initial;
+    font-size: .875rem;
   }
 }
