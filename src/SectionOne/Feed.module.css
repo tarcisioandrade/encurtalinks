@@ -41,3 +41,28 @@
   display: flex;
   gap: 1rem;
 }
+
+@media (max-width: 45rem) {
+  .contentPhoto {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .subtitle {
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 45rem) {
+  .formUrl {
+    padding: 1rem 1rem;
+  }
+  .form {
+    display: initial;
+  }
+}

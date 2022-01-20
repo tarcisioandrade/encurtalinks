@@ -9,10 +9,14 @@
   width: 100px;
   margin-right: 2.3rem;
 }
-
-.nav ul{
+.nav {
+  display: flex;
+  width: 100%;
+}
+.nav ul {
   display: flex;
   align-items: center;
+  flex: 1;
   gap: 1rem;
 }
 .nav ul li a {
@@ -24,6 +28,19 @@
   color: var(--Dark-Violet);
 }
 
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+  background-color: var(--Cyan);
+  color: white;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: hsl(180, 66%, 66%);
+}
+
 .userBox {
   margin-left: auto;
 }
@@ -32,4 +49,68 @@
   margin-right: 1rem;
   color: var(--Gray);
   font-weight: 600;
+}
+
+.hamburguer {
+  display: none;
+}
+
+@media (max-width: 45rem) {
+  html {
+    font-size: 14px;
+  }
+  .header {
+    justify-content: space-between;
+  }
+  .hamburguer {
+    display: block;
+    width: 36px;
+    height: 6px;
+    border-radius: 4px;
+    background: var(--Cyan);
+    box-shadow: 0 10px 0 0 var(--Cyan), 0 -10px 0 0 var(--Cyan);
+  }
+  .nav {
+    display: none;
+  }
+  .nav:global(.active) {
+    display: flex;
+    position: absolute;
+    background: var(--Dark-Violet);
+    border-radius: 16px;
+    text-align: center;
+    flex-direction: column;
+    top: 5rem;
+    max-width: 20rem;
+    padding: 1.5rem 1.5rem;
+    z-index: 1000;
+  }
+  .nav ul {
+    display: initial;
+  }
+  .nav ul li {
+    line-height: 4;
+  }
+
+  .nav ul li:nth-child(3) {
+    border-bottom: 1px solid var(--Cyan);
+  }
+  .nav ul li a {
+    font-size: 1.3rem;
+    color: #fff;
+  }
+  .login {
+    display: block;
+    color: #fff;
+  }
+  .button {
+    display: block;
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+  }
+  .userBox {
+    margin-left: initial;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+  }
 }

@@ -65,3 +65,40 @@
   color: var(--Cyan);
   line-height: 1.4;
 }
+
+@media (max-width: 45rem) {
+  .title {
+    font-size: 1.7rem;
+  }
+  .subtitle {
+    font-size: .875rem;
+    line-height: 1.7;
+    max-width: 20rem;
+    margin-top: 1rem;
+  }
+  .containerCards {
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .card {
+    margin-top: 5rem;
+    text-align: center;
+  }
+  .card:nth-child(2) {
+    margin-top: initial;
+  }
+  
+  .card:nth-child(3) {
+    margin-top: initial;
+  }
+  .imgBox {
+    right: -82.5px;
+  }
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+  .cardText {
+    font-size: .875rem;
+    line-height: 1.7;
+  }
+}

@@ -1,12 +1,11 @@
 .footer {
+  background: var(--Very-Dark-Violet);
+}
+.footerContainer {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   justify-content: center;
   padding: 4rem 2rem 2rem 2rem;
-  background: var(--Very-Dark-Violet);
-}
-.logo {
-  text-align: center;
 }
 .logo svg > * {
   fill: #fff;
@@ -16,14 +15,15 @@
   display: flex;
   justify-content: space-around;
 }
-.ulLinks, .ulBox a {
-  font-size: .8rem;
+.ulLinks,
+.ulBox a {
+  font-size: 0.8rem;
   color: var(--Gray);
-
 }
 .title {
   font-weight: bolder;
   margin-bottom: 1rem;
+  color: #fff;
 }
 
 .ulBox li a {
@@ -31,12 +31,11 @@
 }
 .ulBox a:hover {
   color: var(--Cyan);
-
 }
 
 .boxSociais {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   gap: 1rem;
 }
 
@@ -45,4 +44,21 @@
 }
 .boxSociais svg:hover > * {
   fill: var(--Cyan);
+}
+
+@media (max-width: 45rem) {
+  .footerContainer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .ulBox {
+    display: initial;
+  }
+  .title {
+    margin-top: 3rem;
+  }
+  .boxSociais {
+    justify-content: center;
+    margin-top: 3rem;
+  }
 }
