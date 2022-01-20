@@ -81,6 +81,7 @@
     text-align: center;
     flex-direction: column;
     top: 5rem;
+    right: 1.2rem;
     max-width: 20rem;
     padding: 1.5rem 1.5rem;
     z-index: 1000;
@@ -93,7 +94,7 @@
   }
 
   .nav ul li:nth-child(3) {
-    border-bottom: 1px solid var(--Cyan);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.37);
   }
   .nav ul li a {
     font-size: 1.3rem;

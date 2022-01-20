@@ -12,7 +12,6 @@ const useFetch = () => {
       const response = await fetch(API);
       const json = await response.json();
       if (!response.ok) throw new Error("Algo deu Errado");
-      console.log(json);
       setData(json);
     } catch (err) {
       setError(true);
