@@ -1,36 +1,26 @@
 import React from "react";
 import styles from "./Result.module.css";
 
-const Result = ({ originalLink, shortLink }) => {
-  const [copy, setCopy] = React.useState("");
-  const button = React.useRef();
-
-  async function copyClick() {
-    setCopy(shortLink);
-    await navigator.clipboard.writeText(shortLink);
-    button.current.style.backgroundColor = "hsl(257, 27%, 26%)";
+const Result = ({ links }) => {
+  
+  async function copyClick({ target }) {
+    await navigator.clipboard.writeText(target.previousSibling.innerText);
+    target.style.backgroundColor = "hsl(257, 27%, 26%)";
+    target.innerText = "Copied!";
   }
 
   return (
-    <div className={styles.result}>
-      <div className={styles.resultItem}>
-        <p className={styles.urlUser}>{originalLink}</p>
-        <p className={styles.url}>{shortLink}</p>
-        {copy ? (
-          <button
-            onClick={copyClick}
-            ref={button}
-            className={`${styles.button}`}
-          >
-            Copied!
-          </button>
-        ) : (
+    <>
+      {links.map((link, index) => (
+        <div className={styles.resultItem} key={index}>
+          <p className={styles.urlUser}>{link[0]}</p>
+          <p className={styles.url}>{link[1]}</p>
           <button onClick={copyClick} className={styles.button}>
             Copy
           </button>
-        )}
-      </div>
-    </div>
+        </div>
+      ))}
+    </>
   );
 };
 

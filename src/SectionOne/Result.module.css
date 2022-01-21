@@ -1,12 +1,10 @@
-.result {
-  background: #eee;
-  border-radius: 8px;
-  padding: 1rem;
-  margin: 0 auto;
-}
 .resultItem {
   display: flex;
   align-items: center;
+  margin-top: 1rem;
+  background: #eee;
+  border-radius: 8px;
+  padding: 1rem;
 }
 
 .urlUser {

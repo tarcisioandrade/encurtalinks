@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Button from "../Components/Button";
 import styles from "./Feed.module.css";
 import ilustracao from "../Assets/Imagens/illustration-working.svg";
@@ -12,11 +12,18 @@ import Cards from "./Cards";
 const Feed = () => {
   const url = useForm("url");
   const { request, data, loading } = useFetch();
+  const [links, setLinks] = React.useState([]);
+  const { result } = data;
 
   function handleSubmit(event) {
     event.preventDefault();
     if (url.validate()) request(url.value);
   }
+
+  React.useEffect(() => {
+    result &&
+      setLinks((link) => [[result.original_link, result.share_link], ...link]);
+  }, [result]);
 
   return (
     <section className={styles.section}>
@@ -48,12 +55,7 @@ const Feed = () => {
           )}
         </form>
       </div>
-      {data && (
-        <Result
-          originalLink={data.result.original_link}
-          shortLink={data.result.short_link}
-        />
-      )}
+      {data && <Result links={links} />}
       <Cards />
     </section>
   );
