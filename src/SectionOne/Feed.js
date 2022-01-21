@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Button from "../Components/Button";
 import styles from "./Feed.module.css";
 import ilustracao from "../Assets/Imagens/illustration-working.svg";
